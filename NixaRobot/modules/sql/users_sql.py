@@ -1,7 +1,7 @@
 import threading
 
-from AmeliaRobot import dispatcher
-from AmeliaRobot.modules.sql import BASE, SESSION
+from NixaRobot import dispatcher
+from NixaRobot.modules.sql import BASE, SESSION
 from sqlalchemy import (
     Column,
     ForeignKey,
