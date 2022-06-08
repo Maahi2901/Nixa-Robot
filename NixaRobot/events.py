@@ -8,12 +8,12 @@ from pathlib import Path
 from telethon import events
 
 from pymongo import MongoClient
-from AmeliaRobot import MONGO_DB_URI
-from AmeliaRobot import telethn
+from NixaRobot import MONGO_DB_URI
+from NixaRobot import telethn
 
 client = MongoClient()
 client = MongoClient(MONGO_DB_URI)
-db = client["darkuserbot"]
+db = client["NixaRobot"]
 gbanned = db.gban
 
 def register(**args):
