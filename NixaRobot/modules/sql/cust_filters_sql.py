@@ -2,8 +2,8 @@ import threading
 
 from sqlalchemy import Column, String, UnicodeText, Boolean, Integer, distinct, func
 
-from AmeliaRobot.modules.helper_funcs.msg_types import Types
-from AmeliaRobot.modules.sql import BASE, SESSION
+from NixaRobot.modules.helper_funcs.msg_types import Types
+from NixaRobot.modules.sql import BASE, SESSION
 
 
 class CustomFilters(BASE):
