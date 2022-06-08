@@ -1,4 +1,5 @@
-# Create a new config.py or rename this to config.py file in same dir and import, then extend this class.
+# ======================𝙲𝙾𝙽𝙵𝙸𝙶 𝙵𝙸𝙻𝙴=============================
+
 import json
 import os
 
@@ -11,9 +12,8 @@ def get_user_list(config, key):
 # Create a new config.py or rename this to config.py file in same dir and import, then extend this class.
 class Config(object):
     LOGGER = True
-    # REQUIRED
-    # Login to https://my.telegram.org and fill in these slots with the details given by it
-
+    # =================================𝚁𝙴𝚀𝚄𝙸𝚁𝙴𝙳==================================
+    
     API_ID = 123456  # integer value, dont use ""
     API_HASH = "awoo"
     TOKEN = "BOT_TOKEN"  # This var used to be API_KEY but it is now TOKEN, adjust accordingly.
@@ -27,7 +27,7 @@ class Config(object):
         -1001190806654
     )  # Prints information like gbans, sudo promotes, AI enabled disable states that may help in debugging and shit
 
-    # RECOMMENDED
+    # ===============================𝚁𝙴𝙲𝙾𝙼𝙼𝙴𝙽𝙳𝙴𝙳=====================================
     SQLALCHEMY_DATABASE_URI = "something://somewhat:user@hosturl:port/databasename"  # needed for any database modules
     LOAD = []
     NO_LOAD = ["rss", "cleaner", "connection", "math"]
@@ -37,7 +37,7 @@ class Config(object):
     SPAMWATCH_API = ""  # go to support.spamwat.ch to get key
     SPAMWATCH_SUPPORT_CHAT = "@SpamWatchSupport"
 
-    # OPTIONAL
+    # ==================================𝙾𝙿𝚃𝙸𝙾𝙽𝙰𝙻=====================================
     ##List of id's -  (not usernames) for users which have sudo access to the bot.
     DRAGONS = get_user_list("elevated_users.json", "sudos")
     ##List of id's - (not usernames) for developers who will have the same perms as the owner
