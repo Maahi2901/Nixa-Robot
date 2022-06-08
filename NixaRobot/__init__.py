@@ -7,7 +7,7 @@ import spamwatch
 import telegram.ext as tg
 from pyrogram import Client, errors
 from telethon import TelegramClient
-from AmeliaRobot.utils.logger import log 
+from NixaRobot.utils.logger import log 
 StartTime = time.time()
 
 # enable logging
