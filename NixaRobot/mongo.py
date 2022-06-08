@@ -1,4 +1,3 @@
-#war-legend
 import asyncio
 import sys
 
