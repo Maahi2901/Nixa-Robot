@@ -4,7 +4,7 @@ import re
 from sys import argv
 from typing import Optional
 
-from AmeliaRobot import (
+from NixaRobot import (
     ALLOW_EXCL,
     CERT_PATH,
     DONATION_LINK,
@@ -25,9 +25,9 @@ from AmeliaRobot import (
 
 # needed to dynamically load modules
 # NOTE: Module order is not guaranteed, specify that in the config file!
-from AmeliaRobot.modules import ALL_MODULES
-from AmeliaRobot.modules.helper_funcs.chat_status import is_user_admin
-from AmeliaRobot.modules.helper_funcs.misc import paginate_modules
+from NixaRobot.modules import ALL_MODULES
+from NixaRobot.modules.helper_funcs.chat_status import is_user_admin
+from NixaRobot.modules.helper_funcs.misc import paginate_modules
 from telegram import InlineKeyboardButton, InlineKeyboardMarkup, ParseMode, Update
 from telegram.error import (
     BadRequest,
