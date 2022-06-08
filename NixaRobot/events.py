@@ -17,7 +17,7 @@ db = client["NixaRobot"]
 gbanned = db.gban
 
 def register(**args):
-    """ Registers a new message. """
+    """ 𝚁𝙴𝙶𝙸𝚂𝚃𝙴𝚁 𝙰 𝙽𝙴𝚆 𝙼𝙴𝚂𝚂𝙰𝙶𝙴𝚂. """
     pattern = args.get("pattern", None)
 
     r_pattern = r"^[/!]"
@@ -35,7 +35,7 @@ def register(**args):
 
 
 def chataction(**args):
-    """ Registers chat actions. """
+    """ 𝚁𝙴𝙶𝙸𝚂𝚃𝙴𝚁𝚂 𝙲𝙷𝙰𝚃 𝙰𝙲𝚃𝙸𝙾𝙽𝚂. """
 
     def decorator(func):
         telethn.add_event_handler(func, events.ChatAction(**args))
@@ -45,7 +45,7 @@ def chataction(**args):
 
 
 def userupdate(**args):
-    """ Registers user updates. """
+    """ 𝚁𝙴𝙶𝙸𝚂𝚃𝙴𝚁𝚂 𝚄𝚂𝙴𝚁 𝚄𝙿𝙳𝙰𝚃𝙴𝚂. """
 
     def decorator(func):
         telethn.add_event_handler(func, events.UserUpdate(**args))
@@ -55,7 +55,7 @@ def userupdate(**args):
 
 
 def inlinequery(**args):
-    """ Registers inline query. """
+    """ 𝚁𝙴𝙶𝙸𝚂𝚃𝙴𝚁𝚂 𝙸𝙽𝙻𝙸𝙽𝙴 𝚀𝚄𝙴𝚁𝚈. """
     pattern = args.get("pattern", None)
 
     if pattern is not None and not pattern.startswith("(?i)"):
@@ -69,7 +69,7 @@ def inlinequery(**args):
 
 
 def callbackquery(**args):
-    """ Registers inline query. """
+    """ 𝚁𝙴𝙶𝙸𝚂𝚃𝙴𝚁𝚂 𝙸𝙽𝙻𝙸𝙽𝙴 𝚀𝚄𝙴𝚁𝚈. """
 
     def decorator(func):
         telethn.add_event_handler(func, events.CallbackQuery(**args))
@@ -116,13 +116,13 @@ def bot(**args):
             if check.is_group or check.is_private:
                 pass
             else:
-                print("i don't work in channels")
+                print("» ɪ ᴅᴏɴ'ᴛ ᴡᴏʀᴋ ɪɴ ᴄʜᴀɴɴᴇʟ....")
                 return
             if check.is_group:
                if check.chat.megagroup:
                   pass
                else:
-                  print("i don't work in small chats")
+                  print("» ɪ ᴅᴏɴ'ᴛ ᴡᴏʀᴋ ɪɴ sᴍᴀʟʟ ᴄʜᴀᴛs...")
                   return
                           
             users = gbanned.find({})
@@ -146,7 +146,7 @@ def bot(**args):
     return decorator
 
 
-def AsunaRobot(**args):
+def NixaRobot(**args):
     pattern = args.get("pattern", None)
     disable_edited = args.get("disable_edited", False)
     ignore_unsafe = args.get("ignore_unsafe", False)
@@ -182,32 +182,32 @@ def load_module(shortname):
         pass
     elif shortname.endswith("_"):
         import importlib
-        import YoneRobot.events
+        import NixaRobot.events
 
-        path = Path(f"AmeliaRobot/modules/{shortname}.py")
-        name = "AmeliaRobot.modules.{}".format(shortname)
+        path = Path(f"NixaRobot/modules/{shortname}.py")
+        name = "NixaRobot.modules.{}".format(shortname)
         spec = importlib.util.spec_from_file_location(name, path)
         mod = importlib.util.module_from_spec(spec)
         spec.loader.exec_module(mod)
         print("Successfully imported " + shortname)
     else:
         import importlib
-        import AmeliaRobot.events
+        import NixaRobot.events
 
-        path = Path(f"AmeliaRobot/modules/{shortname}.py")
-        name = "AmeliaRobot.modules.{}".format(shortname)
+        path = Path(f"NixaRobot/modules/{shortname}.py")
+        name = "NixaRobot.modules.{}".format(shortname)
         spec = importlib.util.spec_from_file_location(name, path)
         mod = importlib.util.module_from_spec(spec)
         mod.register = register
-        mod.AmeliaRobot = AmeliaRobot
+        mod.NixaRobot = NixaRobot
         mod.tbot = telethn
         mod.logger = logging.getLogger(shortname)
         spec.loader.exec_module(mod)
-        sys.modules["AmeliaRobot.modules." + shortname] = mod
+        sys.modules["NixaRobot.modules." + shortname] = mod
         print("Successfully imported " + shortname)
 
 
-path = "AmeliaRobot/modules/*.py"
+path = "NixaRobot/modules/*.py"
 files = glob.glob(path)
 for name in files:
     with open(name) as f:
