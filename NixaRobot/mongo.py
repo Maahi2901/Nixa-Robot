@@ -23,4 +23,4 @@ db = client["NixaRobot"]
 try:
     asyncio.get_event_loop().run_until_complete(motor.server_info())
 except ServerSelectionTimeoutError:
-    sys.exit(log.critical("Can't connect to mongodb! Exiting..."))
+    sys.exit(log.critical("» 𝙲𝙰𝙽'𝚃 𝙲𝙾𝙽𝙽𝙴𝙲𝚃 𝚃𝙾 𝙼𝙾𝙽𝙶𝙾𝙳𝙱 𝙴𝚇𝙸𝚃𝙸𝙽𝙶 •••"))
