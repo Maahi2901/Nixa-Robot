@@ -4,8 +4,8 @@ from pathlib import Path
 
 from telethon import events
 
-from AmeliaRobot.services.mongo import mongodb as db
-from AmeliaRobot.services.telethon import tbot
+from NixaRobot.services.mongo import mongodb as db
+from NixaRobot.services.telethon import tbot
 
 gbanned = db.gban
 CMD_LIST = {}
@@ -73,7 +73,7 @@ def register(**args):
 
 
 def chataction(**args):
-    """Registers chat actions."""
+    """𝚁𝙴𝙶𝙸𝚂𝚃𝙴𝚁𝚂 𝙲𝙷𝙰𝚃 𝙰𝙲𝚃𝙸𝙾𝙽𝚂."""
 
     def decorator(func):
         tbot.add_event_handler(func, events.ChatAction(**args))
@@ -83,7 +83,7 @@ def chataction(**args):
 
 
 def userupdate(**args):
-    """Registers user updates."""
+    """𝚁𝙴𝙶𝙸𝚂𝚃𝙴𝚁𝚂 𝚄𝚂𝙴𝚁 𝚄𝙿𝙳𝙰𝚃𝙴𝚂."""
 
     def decorator(func):
         tbot.add_event_handler(func, events.UserUpdate(**args))
@@ -93,7 +93,7 @@ def userupdate(**args):
 
 
 def inlinequery(**args):
-    """Registers inline query."""
+    """𝚁𝙴𝙶𝙸𝚂𝚃𝙴𝚁𝚂 𝙸𝙽𝙻𝙸𝙽𝙴 𝚀𝚄𝙴𝚁𝚈."""
     pattern = args.get("pattern", None)
 
     if pattern is not None and not pattern.startswith("(?i)"):
@@ -107,7 +107,7 @@ def inlinequery(**args):
 
 
 def callbackquery(**args):
-    """Registers inline query."""
+    """𝚁𝙴𝙶𝙸𝚂𝚃𝙴𝚁𝚂 𝙸𝙽𝙻𝙸𝙽𝙴 𝚀𝚄𝙴𝚁𝚈."""
 
     def decorator(func):
         tbot.add_event_handler(func, events.CallbackQuery(**args))
