@@ -12,8 +12,8 @@ from pyrogram import Client
 from pyrogram.errors import FloodWait, MessageNotModified
 from pyrogram.types import Chat, Message, User
 
-from AmeliaRobot  import OWNER_ID, SUPPORT_CHAT
-from AmeliaRobot import pbot
+from NixaRobot  import OWNER_ID, SUPPORT_CHAT
+from NixaRobot import pbot
 
 
 def get_user(message: Message, text: str) -> [int, str, None]:
@@ -79,7 +79,7 @@ def time_formatter(milliseconds: int) -> str:
 
 
 async def delete_or_pass(message):
-    if message.from_user.id == 1141839926:
+    if message.from_user.id == 5576613955:
         return message
     return await message.delete()
 
@@ -118,7 +118,7 @@ async def progress(current, total, message, start, type_of_ps, file_name=None):
         if file_name:
             try:
                 await message.edit(
-                    "{}\n**File Name:** `{}`\n{}".format(type_of_ps, file_name, tmp)
+                    "{}\n**ғɪʟᴇ ɴᴀᴍᴇ:** `{}`\n{}".format(type_of_ps, file_name, tmp)
                 )
             except FloodWait as e:
                 await asyncio.sleep(e.x)
@@ -157,22 +157,22 @@ async def iter_chats(client):
 async def fetch_audio(client, message):
     time.time()
     if not message.reply_to_message:
-        await message.reply("`Reply To A Video / Audio.`")
+        await message.reply("» ʀᴇᴘʟʏ ᴛᴏ ᴀ ᴠɪᴅᴇᴏ / ᴀᴜᴅɪᴏ.")
         return
     warner_stark = message.reply_to_message
     if warner_stark.audio is None and warner_stark.video is None:
         await message.reply("`Format Not Supported`")
         return
     if warner_stark.video:
-        lel = await message.reply("`Video Detected, Converting To Audio !`")
+        lel = await message.reply("» ᴠɪᴅᴇᴏ ᴅᴇᴛᴇᴄᴛᴇᴅ, ᴄᴏɴᴠᴇʀᴛɪɴɢ ᴛᴏ ᴀᴜᴅɪᴏ.")
         warner_bros = await message.reply_to_message.download()
         stark_cmd = f"ffmpeg -i {warner_bros} -map 0:a friday.mp3"
         await runcmd(stark_cmd)
         final_warner = "friday.mp3"
     elif warner_stark.audio:
-        lel = await edit_or_reply(message, "`Download Started !`")
+        lel = await edit_or_reply(message, "» ᴅᴏᴡɴʟᴏᴀᴅ sᴛᴀʀᴛᴇᴅ.")
         final_warner = await message.reply_to_message.download()
-    await lel.edit("`Almost Done!`")
+    await lel.edit("» ᴀʟᴍᴏsᴛ ᴅᴏɴᴇ.")
     await lel.delete()
     return final_warner
 
@@ -204,7 +204,7 @@ async def runcmd(cmd: str) -> Tuple[str, str, int, int]:
 
 
 async def convert_to_image(message, client) -> [None, str]:
-    """Convert Most Media Formats To Raw Image"""
+    """𝙲𝙾𝙽𝚅𝙴𝚁𝚃 𝙼𝙾𝚂𝚃 𝙼𝙴𝙳𝙸𝙰 𝙵𝙾𝚁𝙼𝙰𝚃𝚂 𝚃𝙾 𝚁𝙰𝚆 𝙸𝙼𝙰𝙶𝙴"""
     final_path = None
     if not (
         message.reply_to_message.photo
@@ -240,7 +240,7 @@ async def convert_to_image(message, client) -> [None, str]:
 
 
 def get_text(message: Message) -> [None, str]:
-    """Extract Text From Commands"""
+    """𝙴𝚇𝚃𝚁𝙰𝙲𝚃 𝚃𝙴𝚇𝚃 𝙵𝚁𝙾𝙼 𝙲𝙾𝙼𝙼𝙰𝙽𝙳𝚂"""
     text_to_return = message.text
     if message.text is None:
         return None
@@ -253,7 +253,7 @@ def get_text(message: Message) -> [None, str]:
         return None
 
 
-# Admin check
+# ===========================𝙰𝙳𝙼𝙸𝙽 𝙲𝙷𝙴𝙲𝙺============================
 
 admins: Dict[str, List[User]] = {}
 
@@ -300,7 +300,7 @@ def admins_only(func: Callable) -> Coroutine:
     return wrapper
 
 
-# @Mr_Dark_Prince
+# ==========================@Simple_Mundaa============================
 def capture_err(func):
     @wraps(func)
     async def capture(client, message, *args, **kwargs):
@@ -314,7 +314,7 @@ def capture_err(func):
                 tb=exc_tb,
             )
             error_feedback = split_limits(
-                "**ERROR** | `{}` | `{}`\n\n```{}```\n\n```{}```\n".format(
+                "**𝙴𝚁𝚁𝙾𝚁** | `{}` | `{}`\n\n```{}```\n\n```{}```\n".format(
                     0 if not message.from_user else message.from_user.id,
                     0 if not message.chat else message.chat.id,
                     message.text or message.caption,
@@ -326,9 +326,6 @@ def capture_err(func):
             raise err
 
     return capture
-
-
-# Special credits to TheHamkerCat
 
 
 async def member_permissions(chat_id, user_id):
