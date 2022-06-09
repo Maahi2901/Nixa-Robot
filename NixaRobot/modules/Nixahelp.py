@@ -33,4 +33,4 @@ __help__ = """
 """
 
 
-__mod_name__ = "nixahelp.py"
+__mod_name__ = "ɴɪxᴀ ʜᴇʟᴘ"
