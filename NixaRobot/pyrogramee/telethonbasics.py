@@ -2,7 +2,7 @@ import os
 
 from telethon.tl.types import *
 
-from AmeliaRobot.pyrogramee.pluginshelper import runcmd
+from NixaRobot.pyrogramee.pluginshelper import runcmd
 
 
 async def convert_to_image(event, borg):
@@ -17,13 +17,13 @@ async def convert_to_image(event, borg):
         or lmao.sticker
         or lmao.media
     ):
-        await borg.send_message(event.chat_id, "`Format Not Supported.`")
+        await borg.send_message(event.chat_id, "`» ғᴏʀᴍᴀᴛ ɴᴏᴛ sᴜᴘᴘᴏʀᴛᴇᴅ.`")
         return
     else:
         try:
             time.time()
             downloaded_file_name = await borg.download_media(
-                lmao.media, sedpath, "`Downloading...`"
+                lmao.media, sedpath, "`ᴅᴏᴡɴʟᴏᴀᴅɪɴɢ...`"
             )
 
         except Exception as e:  # pylint:disable=C0103,W0703
@@ -31,11 +31,11 @@ async def convert_to_image(event, borg):
         else:
             lel = await borg.send_message(
                 event.chat_id,
-                "Downloaded to `{}` successfully.".format(downloaded_file_name),
+                "» ᴅᴏᴡɴʟᴏᴀᴅ ᴛᴏ `{}` sᴜᴄᴄᴇssғᴜʟʟʏ.".format(downloaded_file_name),
             )
             await lel.delete
     if not os.path.exists(downloaded_file_name):
-        lel = await borg.send_message(event.chat_id, "Download Unsucessfull :(")
+        lel = await borg.send_message(event.chat_id, "» ᴅᴏᴡɴʟᴏᴀᴅ ᴜɴsᴜᴄᴄᴇssғᴜʟʟ :(")
         await lel.delete
         return
     if lmao and lmao.photo:
@@ -53,7 +53,7 @@ async def convert_to_image(event, borg):
         im = Image.open(pathofsticker2)
         im.save(image_new_path, "PNG")
         if not os.path.exists(image_new_path):
-            await event.reply("`Wasn't Able To Fetch Shot.`")
+            await event.reply("`» ᴡᴀs ɴᴏᴛ ᴀʙʟᴇ ᴛᴏ ғᴇᴛᴄʜ sʜᴏᴛ.`")
             return
         lmao_final = image_new_path
     elif lmao.audio:
@@ -64,7 +64,7 @@ async def convert_to_image(event, borg):
         await runcmd(f"ffmpeg -i {hmmyes} -filter:v scale=500:500 -an {imgpath}")
         os.remove(sed_p)
         if not os.path.exists(imgpath):
-            await event.reply("`Wasn't Able To Fetch Shot.`")
+            await event.reply("`» ᴡᴀs ɴᴏᴛ ᴀʙʟᴇ ᴛᴏ ғᴇᴛᴄʜ sʜᴏᴛ.`")
             return
         lmao_final = imgpath
     elif lmao.gif or lmao.video or lmao.video_note:
@@ -73,7 +73,7 @@ async def convert_to_image(event, borg):
         await take_screen_shot(sed_p2, 0, jpg_file)
         os.remove(sed_p2)
         if not os.path.exists(jpg_file):
-            await event.reply("`Couldn't Fetch. SS`")
+            await event.reply("`» ᴄᴏᴜʟᴅ ɴᴏᴛ ғᴇᴛᴄʜ sᴄʀᴇᴇɴsʜᴏᴛ`")
             return
         lmao_final = jpg_file
     return lmao_final
@@ -82,7 +82,7 @@ async def convert_to_image(event, borg):
 async def take_screen_shot(
     video_file: str, duration: int, path: str = ""
 ) -> Optional[str]:
-    """ take a screenshot """
+    """ 𝚃𝙰𝙺𝙴 𝙰 𝚂𝙲𝚁𝙴𝙴𝙽𝚂𝙷𝙾𝚃 """
     logger.info(
         "[[[Extracting a frame from %s ||| Video duration => %s]]]",
         video_file,
