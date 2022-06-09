@@ -1,23 +1,3 @@
-#    Copyright (C) 2020-2021 by @AmarnathCdj & @InukaAsith
-#    Chatbot system written by @AmarnathCdj databse added and recoded for pyrogram by @InukaAsith
-#    This programme is a part of asuna (TG bot) project
-#
-#    This program is free software: you can redistribute it and/or modify
-#    it under the terms of the GNU Affero General Public License as published by
-#    the Free Software Foundation, either version 3 of the License, or
-#
-#    This program is distributed in the hope that it will be useful,
-#    but WITHOUT ANY WARRANTY; without even the implied warranty of
-#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-#    GNU Affero General Public License for more details.
-#
-#    You should have received a copy of the GNU Affero General Public License
-#    along with this program.  If not, see <https://www.gnu.org/licenses/>.
-
-#    Kang with the credits
-#    Special credits to @AmarnathCdj
-import re
-
 import emoji
 import requests
 
@@ -26,24 +6,6 @@ IBM_WATSON_CRED_PASSWORD = "UQ1MtTzZhEsMGK094klnfa-7y_4MCpJY1yhd52MXOo3Y"
 url = "https://acobot-brainshop-ai-v1.p.rapidapi.com/get"
 from google_trans_new import google_translator
 from pyrogram import filters
-#    Copyright (C) 2020-2021 by @AmarnathCdj & @InukaAsith
-#    Chatbot system written by @AmarnathCdj databse added and recoded for pyrogram by @InukaAsith
-#    This programme is a part of asuna (TG bot) project
-#
-#    This program is free software: you can redistribute it and/or modify
-#    it under the terms of the GNU Affero General Public License as published by
-#    the Free Software Foundation, either version 3 of the License, or
-#
-#    This program is distributed in the hope that it will be useful,
-#    but WITHOUT ANY WARRANTY; without even the implied warranty of
-#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-#    GNU Affero General Public License for more details.
-#
-#    You should have received a copy of the GNU Affero General Public License
-#    along with this program.  If not, see <https://www.gnu.org/licenses/>.
-
-#    Kang with the credits
-#    Special credits to @AmarnathCdj
 import re
 
 import emoji
@@ -53,9 +15,9 @@ url = "https://acobot-brainshop-ai-v1.p.rapidapi.com/get"
 from google_trans_new import google_translator
 from pyrogram import filters
 
-from AmeliaRobot.helper_extra.aichat import add_chat, get_session, remove_chat
-from AmeliaRobot.pyrogramee.pluginshelper import admins_only, edit_or_reply
-from AmeliaRobot import pbot as Amelia
+from NixaRobot.helper_extra.aichat import add_chat, get_session, remove_chat
+from NixaRobot.pyrogramee.pluginshelper import admins_only, edit_or_reply
+from NixaRobot import pbot as Amelia
 
 translator = google_translator()
 
@@ -63,41 +25,41 @@ translator = google_translator()
 def extract_emojis(s):
     return "".join(c for c in s if c in emoji.UNICODE_EMOJI)
 
-BOT_ID = 1793109179
-amelia_chats = []
+BOT_ID = 5161061691
+nixa_chats = []
 en_chats = []
-# AI Chat (C) 2020-2021 by @InukaAsith
+# AI Chat (C) 2020-2021 by @Simple_Mundaa
 
 
-@Amelia.on_message(filters.command("chatbot") & ~filters.edited & ~filters.bot)
+@nixa.on_message(filters.command("chatbot") & ~filters.edited & ~filters.bot)
 @admins_only
 async def hmm(_, message):
     global amelia_chats
     if len(message.command) != 2:
         await message.reply_text(
-            "I only recognize `/chatbot on` and /chatbot `off only`"
+            "» ɪ ᴏɴʟʏ ʀᴇᴄᴏɢɴɪᴢᴇ `/chatbot on` ᴀɴᴅ /chatbot `off ᴏɴʟʏ`"
         )
         message.continue_propagation()
     status = message.text.split(None, 1)[1]
     chat_id = message.chat.id
     if status == "ON" or status == "on" or status == "On":
-        lel = await edit_or_reply(message, "`Processing...`")
+        lel = await edit_or_reply(message, "`ᴘʀᴏᴄᴇssɪɴɢ...`")
         lol = add_chat(int(message.chat.id))
         if not lol:
-            await lel.edit("amelia AI Already Activated In This Chat")
+            await lel.edit("nixa AI Already Activated In This Chat")
             return
         await lel.edit(
-            f"amelia AI Successfully Added For Users In The Chat {message.chat.id}"
+            f"Nixa AI Successfully Added For Users In The Chat {message.chat.id}"
         )
 
     elif status == "OFF" or status == "off" or status == "Off":
         lel = await edit_or_reply(message, "`Processing...`")
         Escobar = remove_chat(int(message.chat.id))
         if not Escobar:
-            await lel.edit("amelia AI Was Not Activated In This Chat")
+            await lel.edit("Nixa AI Was Not Activated In This Chat")
             return
         await lel.edit(
-            f"amelia AI Successfully Deactivated For Users In The Chat {message.chat.id}"
+            f"Nixa AI Successfully Deactivated For Users In The Chat {message.chat.id}"
         )
 
     elif status == "EN" or status == "en" or status == "english":
@@ -113,7 +75,7 @@ async def hmm(_, message):
         )
 
 
-@Amelia.on_message(
+@nixa.on_message(
     filters.text & filters.reply & ~filters.bot & ~filters.via_bot & ~filters.forwarded,
     group=2,
 )
@@ -126,8 +88,8 @@ async def hmm(client, message):
         message.continue_propagation()
     if chat_id in en_chats:
         test = msg
-        test = test.replace("amelia", "Aco")
-        test = test.replace("amelia", "Aco")
+        test = test.replace("nixa", "Aco")
+        test = test.replace("nixa", "Aco")
         querystring = {
             "bid": "178",
             "key": "sX5A2PcYZbsN5EY6",
@@ -142,12 +104,12 @@ async def hmm(client, message):
         result = response.text
         result = result.replace('{"cnt":"', "")
         result = result.replace('"}', "")
-        result = result.replace("Aco", "amelia")
+        result = result.replace("Aco", "nixa")
         result = result.replace("<a href=\\", "<a href =")
         result = result.replace("<\/a>", "</a>")
         pro = result
         try:
-            await amelia.send_chat_action(message.chat.id, "typing")
+            await nixa.send_chat_action(message.chat.id, "typing")
             await message.reply_text(pro)
         except CFError as e:
             print(e)
