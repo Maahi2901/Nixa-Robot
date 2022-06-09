@@ -1,11 +1,11 @@
-from AmeliaRobot.mongo import db
+from NixaRobot.mongo import db
 from typing import Dict, List, Union
 
 
 coupledb = db.couple
 karmadb = db.karma
 
-# Couple Chooser
+# ====================𝙲𝙾𝚄𝙿𝙻𝙴 𝙲𝙷𝙾𝙾𝚂𝙴𝚁===================
 
 async def _get_lovers(chat_id: int):
     lovers = coupledb.find_one({"chat_id": chat_id})
@@ -38,7 +38,7 @@ async def save_couple(chat_id: int, date: str, couple: dict):
     )
 
 
-# Karma functions
+# =======================𝙺𝙰𝚁𝙼𝙰 𝙵𝚄𝙽𝙲𝚃𝙸𝙾𝙽==========================
 
 
 async def get_karmas_count() -> dict:
@@ -88,7 +88,7 @@ async def update_karma(chat_id: int, name: str, karma: dict):
     )
 
 
-# Alpha integer 
+# ==========================𝙰𝙻𝙿𝙷𝙰 𝙸𝙽𝚃𝙴𝙶𝙴𝚁𝚂======================== 
 
 async def int_to_alpha(user_id: int) -> str:
     alphabet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j"]
