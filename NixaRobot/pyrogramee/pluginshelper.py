@@ -161,7 +161,7 @@ async def fetch_audio(client, message):
         return
     warner_stark = message.reply_to_message
     if warner_stark.audio is None and warner_stark.video is None:
-        await message.reply("`Format Not Supported`")
+        await message.reply("» ғᴏʀᴍᴀᴛ ɴᴏᴛ sᴜᴘᴘᴏʀᴛᴇᴅ.")
         return
     if warner_stark.video:
         lel = await message.reply("» ᴠɪᴅᴇᴏ ᴅᴇᴛᴇᴄᴛᴇᴅ, ᴄᴏɴᴠᴇʀᴛɪɴɢ ᴛᴏ ᴀᴜᴅɪᴏ.")
