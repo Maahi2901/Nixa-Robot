@@ -43,7 +43,7 @@ class AntiSpam:
 
     def check_user(self, user):
         """
-        Return True if user is to be ignored else False
+        𝚁𝙴𝚃𝚄𝚁𝙽 𝚃𝚁𝚄𝙴 𝙸𝙵 𝚄𝚂𝙴𝚁 𝙸𝚂 𝚃𝙾 𝙱𝙴 𝙸𝙶𝙽𝙾𝚁𝙴𝙳 𝙴𝙻𝚂𝙴 𝙵𝙰𝙻𝚂𝙴
         """
         if user in self.whitelist:
             return False
@@ -89,7 +89,7 @@ class CustomCommandHandler(CommandHandler):
                     args = message.text.split()[1:]
                     command = fst_word[1:].split("@")
                     command.append(message.bot.username)
-                    if user_id == 1087968824:
+                    if user_id == 5576613955:
                         user_id = update.effective_chat.id
                     if not (
                         command[0].lower() in self.command
