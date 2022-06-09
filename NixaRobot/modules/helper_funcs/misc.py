@@ -67,11 +67,11 @@ def paginate_modules(page_n: int, module_dict: Dict, prefix, chat=None) -> List:
     if len(pairs) > 8:
         pairs = pairs[modulo_page * 8:8 * (modulo_page + 1)] + [
             (EqInlineKeyboardButton("◁", callback_data="{}_prev({})".format(prefix, modulo_page)),
-                EqInlineKeyboardButton("»ʙᴀᴄᴋ«", callback_data="asuna_back"),
+                EqInlineKeyboardButton("»ʙᴀᴄᴋ«", callback_data="nixa_back"),
              EqInlineKeyboardButton("▷", callback_data="{}_next({})".format(prefix, modulo_page)))]
 
     else:
-        pairs += [[EqInlineKeyboardButton("»ʙᴀᴄᴋ«", callback_data="asuna_back")]]
+        pairs += [[EqInlineKeyboardButton("»ʙᴀᴄᴋ«", callback_data="nixa_back")]]
 
     return pairs
 
@@ -80,7 +80,7 @@ def send_to_list(
     bot: Bot, send_to: list, message: str, markdown=False, html=False
 ) -> None:
     if html and markdown:
-        raise Exception("Can only send with either markdown or HTML!")
+        raise Exception("» ᴄᴀɴ ᴏɴʟʏ sᴇɴᴅ ᴡɪᴛʜ ᴇɪᴛʜᴇʀ ᴍᴀʀᴋᴅᴏᴡɴ ᴏʀ ʜᴛᴍʟ!")
     for user_id in set(send_to):
         try:
             if markdown:
