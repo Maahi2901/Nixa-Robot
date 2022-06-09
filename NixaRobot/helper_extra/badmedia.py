@@ -1,4 +1,4 @@
-from AmeliaRobot import telethn as tbot
+from NixaRobot import telethn as tbot
 import requests
 import time
 
