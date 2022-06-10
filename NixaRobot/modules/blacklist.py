@@ -6,18 +6,18 @@ from telegram.error import BadRequest
 from telegram.ext import CommandHandler, MessageHandler, Filters, run_async
 from telegram.utils.helpers import mention_html
 
-import AmeliaRobot.modules.sql.blacklist_sql as sql
-from AmeliaRobot import dispatcher, LOGGER
-from AmeliaRobot.modules.disable import DisableAbleCommandHandler
-from AmeliaRobot.modules.helper_funcs.chat_status import user_admin, user_not_admin
-from AmeliaRobot.modules.helper_funcs.extraction import extract_text
-from AmeliaRobot.modules.helper_funcs.misc import split_message
-from AmeliaRobot.modules.log_channel import loggable
-from AmeliaRobot.modules.warns import warn
-from AmeliaRobot.modules.helper_funcs.string_handling import extract_time
-from AmeliaRobot.modules.connection import connected
-from AmeliaRobot.modules.sql.approve_sql import is_approved
-from AmeliaRobot.modules.helper_funcs.alternate import send_message, typing_action
+import NixaRobot.modules.sql.blacklist_sql as sql
+from NixaRobot import dispatcher, LOGGER
+from NixaRobot.modules.disable import DisableAbleCommandHandler
+from NixaRobot.modules.helper_funcs.chat_status import user_admin, user_not_admin
+from NixaRobot.modules.helper_funcs.extraction import extract_text
+from NixaRobot.modules.helper_funcs.misc import split_message
+from NixaRobot.modules.log_channel import loggable
+from NixaRobot.modules.warns import warn
+from NixaRobot.modules.helper_funcs.string_handling import extract_time
+from NixaRobot.modules.connection import connected
+from NixaRobot.modules.sql.approve_sql import is_approved
+from NixaRobot.modules.helper_funcs.alternate import send_message, typing_action
 
 BLACKLIST_GROUP = 11
 
