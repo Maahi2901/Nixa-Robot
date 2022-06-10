@@ -1,11 +1,11 @@
 import html
-from AmeliaRobot.modules.disable import DisableAbleCommandHandler
-from AmeliaRobot import dispatcher, DRAGONS
-from AmeliaRobot.modules.helper_funcs.extraction import extract_user
+from NixaRobot.modules.disable import DisableAbleCommandHandler
+from NixaRobot import dispatcher, DRAGONS
+from NixaRobot.modules.helper_funcs.extraction import extract_user
 from telegram.ext import CallbackContext, CallbackQueryHandler, Filters, run_async
-import AmeliaRobot.modules.sql.approve_sql as sql
-from AmeliaRobot.modules.helper_funcs.chat_status import user_admin
-from AmeliaRobot.modules.log_channel import loggable
+import NixaRobot.modules.sql.approve_sql as sql
+from NixaRobot.modules.helper_funcs.chat_status import user_admin
+from NixaRobot.modules.log_channel import loggable
 from telegram import ParseMode, InlineKeyboardMarkup, InlineKeyboardButton, Update
 from telegram.utils.helpers import mention_html
 from telegram.error import BadRequest
