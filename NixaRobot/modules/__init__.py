@@ -1,4 +1,4 @@
-from AmeliaRobot import LOAD, LOGGER, NO_LOAD
+from NixaRobot import LOAD, LOGGER, NO_LOAD
 
 
 def __list_all_modules():
