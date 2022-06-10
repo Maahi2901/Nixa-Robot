@@ -5,9 +5,9 @@ from telegram.error import BadRequest
 from telegram.ext import CallbackContext, CommandHandler, Filters, run_async
 from telegram.utils.helpers import mention_html
 
-from AmeliaRobot import DRAGONS, dispatcher
-from AmeliaRobot.modules.disable import DisableAbleCommandHandler
-from AmeliaRobot.modules.helper_funcs.chat_status import (
+from NixaRobot import DRAGONS, dispatcher
+from NixaRobot.modules.disable import DisableAbleCommandHandler
+from NixaRobot.modules.helper_funcs.chat_status import (
     bot_admin,
     can_pin,
     can_promote,
@@ -15,19 +15,19 @@ from AmeliaRobot.modules.helper_funcs.chat_status import (
     user_admin,
     ADMIN_CACHE,
 )
-from AmeliaRobot.helper_extra.admin_rights import (
+from NixaRobot.helper_extra.admin_rights import (
     user_can_pin,
     user_can_promote,
     user_can_changeinfo,
 )
 
-from AmeliaRobot.modules.helper_funcs.extraction import (
+from NixaRobot.modules.helper_funcs.extraction import (
     extract_user,
     extract_user_and_text,
 )
-from AmeliaRobot.modules.log_channel import loggable
-from AmeliaRobot.modules.helper_funcs.alternate import send_message
-from AmeliaRobot.modules.helper_funcs.alternate import typing_action
+from NixaRobot.modules.log_channel import loggable
+from NixaRobot.modules.helper_funcs.alternate import send_message
+from NixaRobot.modules.helper_funcs.alternate import typing_action
 
 
 @run_async
