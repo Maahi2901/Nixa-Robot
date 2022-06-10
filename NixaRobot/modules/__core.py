@@ -1,15 +1,15 @@
-from AmeliaRobot import telethn as tbot
-from AmeliaRobot.events import register
+from NixaRobot import telethn as tbot
+from NixaRobot.events import register
 import os
 import asyncio
 import os
 import time
 from datetime import datetime
-from AmeliaRobot import OWNER_ID
-from AmeliaRobot import TEMP_DOWNLOAD_DIRECTORY as path
-from AmeliaRobot import TEMP_DOWNLOAD_DIRECTORY
+from NixaRobot import OWNER_ID
+from NixaRobot import TEMP_DOWNLOAD_DIRECTORY as path
+from NixaRobot import TEMP_DOWNLOAD_DIRECTORY
 from datetime import datetime
-water = './AmeliaRobot/resources/amelia.jpg'
+water = './NixaRobot/resources/Nixa.jpg'
 client = tbot
 
 @register(pattern=r"^/send ?(.*)")
@@ -21,7 +21,7 @@ async def Prof(event):
     thumb = water
     message_id = event.message.id
     input_str = event.pattern_match.group(1)
-    the_plugin_file = "./AmeliaRobot/modules/{}.py".format(input_str)
+    the_plugin_file = "./NixaRobot/modules/{}.py".format(input_str)
     if os.path.exists(the_plugin_file):
      message_id = event.message.id
      await event.client.send_file(
@@ -36,7 +36,7 @@ async def Prof(event):
         await event.reply("No File Found!")
 
 
-from AmeliaRobot.events import load_module
+from NixaRobot.events import load_module
 import asyncio
 import os
 from datetime import datetime
