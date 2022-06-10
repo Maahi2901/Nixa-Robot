@@ -9,20 +9,20 @@ from telegram.utils.helpers import mention_html
 
 from alphabet_detector import AlphabetDetector
 
-import AmeliaRobot.modules.sql.locks_sql as sql
-from AmeliaRobot import dispatcher, DRAGONS, LOGGER
-from AmeliaRobot.modules.disable import DisableAbleCommandHandler
-from AmeliaRobot.modules.helper_funcs.chat_status import (
+import NixaRobot.modules.sql.locks_sql as sql
+from NixaRobot import dispatcher, DRAGONS, LOGGER
+from NixaRobot.modules.disable import DisableAbleCommandHandler
+from NixaRobot.modules.helper_funcs.chat_status import (
     can_delete,
     is_user_admin,
     user_not_admin,
     is_bot_admin,
     user_admin,
 )
-from AmeliaRobot.modules.log_channel import loggable
-from AmeliaRobot.modules.connection import connected
-from AmeliaRobot.modules.sql.approve_sql import is_approved
-from AmeliaRobot.modules.helper_funcs.alternate import send_message, typing_action
+from NixaRobot.modules.log_channel import loggable
+from NixaRobot.modules.connection import connected
+from NixaRobot.modules.sql.approve_sql import is_approved
+from NixaRobot.modules.helper_funcs.alternate import send_message, typing_action
 
 ad = AlphabetDetector()
 
