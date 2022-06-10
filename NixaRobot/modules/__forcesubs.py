@@ -1,5 +1,3 @@
-# credits  @itsmelegend
-
 import logging
 import time
 
@@ -12,9 +10,9 @@ from pyrogram.errors.exceptions.bad_request_400 import (
 )
 from pyrogram.types import ChatPermissions, InlineKeyboardButton, InlineKeyboardMarkup
 
-from AmeliaRobot import DRAGONS as SUDO_USERS
-from AmeliaRobot import pbot
-from AmeliaRobot.modules.sql_extended import forceSubscribe_sql as sql
+from NixaRobot import DRAGONS as SUDO_USERS
+from NixaRobot import pbot
+from NixaRobot.modules.sql_extended import forceSubscribe_sql as sql
 
 logging.basicConfig(level=logging.INFO)
 
@@ -42,7 +40,7 @@ def _onUnMuteRequest(client, cb):
                 except UserNotParticipant:
                     client.answer_callback_query(
                         cb.id,
-                        text=f"❗ Join our @{channel} channel and press 'UnMute Me' button.",
+                        text=f"ᴊᴏɪɴ ᴏᴜʀ @{channel} ᴄʜᴀɴɴᴇʟ ᴀɴᴅ ᴘʀᴇss 'ᴜɴᴍᴜᴛᴇ ᴍᴇ' button.",
                         show_alert=True,
                     )
             else:
@@ -86,7 +84,7 @@ def _check_member(client, message):
             except UserNotParticipant:
                 try:
                     sent_message = message.reply_text(
-                        "Welcome {} 🙏 \n **You havent joined our @{} Channel yet** 😭 \n \nPlease Join [Our Channel](https://t.me/{}) and hit the **UNMUTE ME** Button. \n \n ".format(
+                        "ᴡᴇʟᴄᴏᴍᴇ {} 🙏 \n **ʏᴏᴜ ʜᴀᴠᴇɴᴛ ᴊᴏɪɴᴇᴅ ᴏᴜʀ @{} ᴄʜᴀɴɴᴇʟ ʏᴇᴛ** 😭 \n \nᴘʟᴇᴀsᴇ ᴊᴏɪɴ [ᴏᴜʀ ᴄʜᴀɴɴᴇʟ](https://t.me/{}) ᴀɴᴅ ʜɪᴛ ᴛʜᴇ **ᴜɴᴍᴜᴛᴇ ᴍᴇ** ʙᴜᴛᴛᴏɴ. \n \n ".format(
                             message.from_user.mention, channel, channel
                         ),
                         disable_web_page_preview=True,
@@ -94,13 +92,13 @@ def _check_member(client, message):
                             [
                                 [
                                     InlineKeyboardButton(
-                                        "Join Channel",
+                                        "ᴊᴏɪɴ ᴄʜᴀɴɴᴇʟ",
                                         url="https://t.me/{}".format(channel),
                                     )
                                 ],
                                 [
                                     InlineKeyboardButton(
-                                        "UnMute Me", callback_data="onUnMuteRequest"
+                                        "ᴜɴᴍᴜᴛᴇ ᴍᴇ", callback_data="onUnMuteRequest"
                                     )
                                 ],
                             ]
@@ -111,7 +109,7 @@ def _check_member(client, message):
                     )
                 except ChatAdminRequired:
                     sent_message.edit(
-                        "❗ **Amelia is not admin here..**\n__Give me ban permissions and retry.. \n#Ending FSub...__"
+                        "❗ **Nixa is not admin here..**\n__Give me ban permissions and retry.. \n#Ending FSub...__"
                     )
 
             except ChatAdminRequired:
@@ -181,7 +179,7 @@ def config(client, message):
 
 __help__ = """
 *Force Subscribe:*
-❍ Amelia can mute members who are not subscribed your channel until they subscribe
+❍ Nixa can mute members who are not subscribed your channel until they subscribe
 ❍ When enabled I will mute unsubscribed members and show them a unmute button. When they pressed the button I will unmute them
 *Setup*
 *Only creator*
@@ -196,4 +194,4 @@ __help__ = """
   💡If you disable fsub, you need to set again for working.. /fsub {channel username} 
  ❍ /fsub clear - To unmute all members who muted by me.
 """
-__mod_name__ = "F-Sub"
+__mod_name__ = "ғᴏʀᴄᴇ-sᴜʙ"
