@@ -1,12 +1,12 @@
 import random, html
 
-from AmeliaRobot import dispatcher
-from AmeliaRobot.modules.disable import (
+from NixaRobot import dispatcher
+from NixaRobot.modules.disable import (
     DisableAbleCommandHandler,
     DisableAbleMessageHandler,
 )
-from AmeliaRobot.modules.sql import afk_sql as sql
-from AmeliaRobot.modules.users import get_user_id
+from NixaRobot.modules.sql import afk_sql as sql
+from NixaRobot.modules.users import get_user_id
 from telegram import MessageEntity, Update
 from telegram.error import BadRequest
 from telegram.ext import CallbackContext, Filters, MessageHandler, run_async
