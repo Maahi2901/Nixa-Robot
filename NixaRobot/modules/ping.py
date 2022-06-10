@@ -5,9 +5,9 @@ import requests
 from telegram import ParseMode, Update
 from telegram.ext import CallbackContext, run_async
 
-from AmeliaRobot import StartTime, dispatcher
-from AmeliaRobot.modules.helper_funcs.chat_status import sudo_plus
-from AmeliaRobot.modules.disable import DisableAbleCommandHandler
+from NixaRobot import StartTime, dispatcher
+from NixaRobot.modules.helper_funcs.chat_status import sudo_plus
+from NixaRobot.modules.disable import DisableAbleCommandHandler
 
 sites_list = {
     "Telegram": "https://api.telegram.org",
