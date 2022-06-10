@@ -11,10 +11,10 @@ from telegram.ext import (
     run_async,
 )
 
-import AmeliaRobot.modules.sql.users_sql as sql
-from AmeliaRobot import DEV_USERS, LOGGER, OWNER_ID, dispatcher
-from AmeliaRobot.modules.helper_funcs.chat_status import dev_plus, sudo_plus
-from AmeliaRobot.modules.sql.users_sql import get_all_users
+import NixaRobot.modules.sql.users_sql as sql
+from NixaRobot import DEV_USERS, LOGGER, OWNER_ID, dispatcher
+from NixaRobot.modules.helper_funcs.chat_status import dev_plus, sudo_plus
+from NixaRobot.modules.sql.users_sql import get_all_users
 
 USERS_GROUP = 4
 CHAT_GROUP = 5
