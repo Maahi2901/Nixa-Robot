@@ -6,8 +6,8 @@ import time
 import uuid
 from io import BytesIO
 
-import AmeliaRobot.modules.sql.feds_sql as sql
-from AmeliaRobot import (
+import NixaRobot.modules.sql.feds_sql as sql
+from NixaRobot import (
     EVENT_LOGS,
     LOGGER,
     SUPPORT_CHAT,
@@ -17,15 +17,15 @@ from AmeliaRobot import (
     WOLVES,
     dispatcher,
 )
-from AmeliaRobot.modules.disable import DisableAbleCommandHandler
-from AmeliaRobot.modules.helper_funcs.alternate import send_message
-from AmeliaRobot.modules.helper_funcs.chat_status import is_user_admin
-from AmeliaRobot.modules.helper_funcs.extraction import (
+from NixaRobot.modules.disable import DisableAbleCommandHandler
+from NixaRobot.modules.helper_funcs.alternate import send_message
+from NixaRobot.modules.helper_funcs.chat_status import is_user_admin
+from NixaRobot.modules.helper_funcs.extraction import (
     extract_unt_fedban,
     extract_user,
     extract_user_fban,
 )
-from AmeliaRobot.modules.helper_funcs.string_handling import markdown_parser
+from NixaRobot.modules.helper_funcs.string_handling import markdown_parser
 from telegram import (
     InlineKeyboardButton,
     InlineKeyboardMarkup,
