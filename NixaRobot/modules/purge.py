@@ -1,8 +1,8 @@
 import time
 from telethon import events
 
-from AmeliaRobot import telethn
-from AmeliaRobot.modules.helper_funcs.telethn.chatstatus import (
+from NixaRobot import telethn
+from NixaRobot.modules.helper_funcs.telethn.chatstatus import (
     can_delete_messages,
     user_is_admin,
 )
