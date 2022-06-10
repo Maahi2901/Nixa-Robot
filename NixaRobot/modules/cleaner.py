@@ -1,15 +1,15 @@
 
 import html
 
-from AmeliaRobot import ALLOW_EXCL, CustomCommandHandler, dispatcher
-from AmeliaRobot.modules.disable import DisableAbleCommandHandler
-from AmeliaRobot.modules.helper_funcs.chat_status import (
+from NixaRobot import ALLOW_EXCL, CustomCommandHandler, dispatcher
+from NixaRobot.modules.disable import DisableAbleCommandHandler
+from NixaRobot.modules.helper_funcs.chat_status import (
     bot_can_delete,
     connection_status,
     dev_plus,
     user_admin,
 )
-from AmeliaRobot.modules.sql import cleaner_sql as sql
+from NixaRobot.modules.sql import cleaner_sql as sql
 from telegram import ParseMode, Update
 from telegram.ext import (
     CallbackContext,
