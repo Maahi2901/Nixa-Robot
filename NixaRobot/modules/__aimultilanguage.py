@@ -17,7 +17,7 @@ from pyrogram import filters
 
 from NixaRobot.helper_extra.aichat import add_chat, get_session, remove_chat
 from NixaRobot.pyrogramee.pluginshelper import admins_only, edit_or_reply
-from NixaRobot import pbot as Amelia
+from NixaRobot import pbot as Nixa
 
 translator = google_translator()
 
@@ -34,7 +34,7 @@ en_chats = []
 @nixa.on_message(filters.command("chatbot") & ~filters.edited & ~filters.bot)
 @admins_only
 async def hmm(_, message):
-    global amelia_chats
+    global nixa_chats
     if len(message.command) != 2:
         await message.reply_text(
             "» ɪ ᴏɴʟʏ ʀᴇᴄᴏɢɴɪᴢᴇ `/chatbot on` ᴀɴᴅ /chatbot `off ᴏɴʟʏ`"
@@ -149,9 +149,9 @@ async def hmm(client, message):
 
         # test = emoji.demojize(test.strip())
 
-        # Kang with the credits bitches @InukaASiTH
-        test = test.replace("amelia", "Aco")
-        test = test.replace("amelia", "Aco")
+        
+        test = test.replace("nixa", "Aco")
+        test = test.replace("nixa", "Aco")
         querystring = {
             "bid": "178",
             "key": "sX5A2PcYZbsN5EY6",
@@ -179,7 +179,7 @@ async def hmm(client, message):
             print(e)
 
 
-@Amelia.on_message(filters.text & filters.private & ~filters.reply & ~filters.bot)
+@Nixa.on_message(filters.text & filters.private & ~filters.reply & ~filters.bot)
 async def inuka(client, message):
     msg = message.text
     if msg.startswith("/") or msg.startswith("@"):
@@ -219,9 +219,9 @@ async def inuka(client, message):
 
     # test = emoji.demojize(test.strip())
 
-    # Kang with the credits bitches @InukaASiTH
-    test = test.replace("amelia", "Aco")
-    test = test.replace("amelia", "Aco")
+    # Kang with the credits bitches @Simple_Mundaa
+    test = test.replace("nixa", "Aco")
+    test = test.replace("nixa", "Aco")
     querystring = {
         "bid": "178",
         "key": "sX5A2PcYZbsN5EY6",
@@ -236,28 +236,28 @@ async def inuka(client, message):
     result = response.text
     result = result.replace('{"cnt":"', "")
     result = result.replace('"}', "")
-    result = result.replace("Aco", "amelia")
+    result = result.replace("Aco", "nixa")
     result = result.replace("<a href=\\", "<a href =")
     result = result.replace("<\/a>", "</a>")
     pro = result
     if not "en" in lan and not lan == "":
         pro = translator.translate(pro, lang_tgt=lan[0])
     try:
-        await amelia.send_chat_action(message.chat.id, "typing")
+        await nixa.send_chat_action(message.chat.id, "typing")
         await message.reply_text(pro)
     except CFError as e:
         print(e)
 
 
-@Amelia.on_message(
-    filters.regex("amelia|Amelia|warlegend|hello|hi")
+@Nixa.on_message(
+    filters.regex("nixa|Nixa|warlegend|hello|hi")
     & ~filters.bot
     & ~filters.via_bot
     & ~filters.forwarded
     & ~filters.reply
     & ~filters.channel  
 )
-async def inuka(client, message):
+async def sumit(client, message):
     msg = message.text
     if msg.startswith("/") or msg.startswith("@"):
         message.continue_propagation()
@@ -296,9 +296,9 @@ async def inuka(client, message):
 
     # test = emoji.demojize(test.strip())
 
-    # Kang with the credits bitches @InukaASiTH
-    test = test.replace("amelia", "Aco")
-    test = test.replace("amelia", "Aco")
+    # Kang with the credits bitches @Simple_Mundaa
+    test = test.replace("nixa", "Aco")
+    test = test.replace("nixa", "Aco")
     querystring = {
         "bid": "178",
         "key": "sX5A2PcYZbsN5EY6",
