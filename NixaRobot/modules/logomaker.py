@@ -1,6 +1,6 @@
-from AmeliaRobot.events import register
-from AmeliaRobot import OWNER_ID
-from AmeliaRobot import telethn as tbot
+from NixaRobot.events import register
+from NixaRobot import OWNER_ID
+from NixaRobot import telethn as tbot
 import os 
 from PIL import Image, ImageDraw, ImageFont
 
