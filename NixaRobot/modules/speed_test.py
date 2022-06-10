@@ -1,7 +1,7 @@
 import speedtest
-from AmeliaRobot import DEV_USERS, dispatcher
-from AmeliaRobot.modules.disable import DisableAbleCommandHandler
-from AmeliaRobot.modules.helper_funcs.chat_status import dev_plus
+from NixaRobot import DEV_USERS, dispatcher
+from NixaRobot.modules.disable import DisableAbleCommandHandler
+from NixaRobot.modules.helper_funcs.chat_status import dev_plus
 from telegram import InlineKeyboardButton, InlineKeyboardMarkup, ParseMode, Update
 from telegram.ext import CallbackContext, CallbackQueryHandler, run_async
 
