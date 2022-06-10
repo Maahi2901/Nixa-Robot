@@ -1,8 +1,8 @@
 # ©itsmelegend
 import aiohttp
 from pyrogram import filters
-from AmeliaRobot import pbot
-from AmeliaRobot.pyrogramee.errors import capture_err
+from NixaRobot import pbot
+from NixaRobot.pyrogramee.errors import capture_err
 
 
 __mod_name__ = "Github"
