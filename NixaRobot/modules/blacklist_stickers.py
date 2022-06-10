@@ -1,17 +1,17 @@
 import html
 from typing import Optional
 
-import AmeliaRobot.modules.sql.blsticker_sql as sql
-from AmeliaRobot import LOGGER, dispatcher
-from AmeliaRobot.modules.connection import connected
-from AmeliaRobot.modules.disable import DisableAbleCommandHandler
-from AmeliaRobot.modules.helper_funcs.alternate import send_message
-from AmeliaRobot.modules.helper_funcs.chat_status import user_admin, user_not_admin
-from AmeliaRobot.modules.helper_funcs.misc import split_message
-from AmeliaRobot.modules.helper_funcs.string_handling import extract_time
+import NixaRobot.modules.sql.blsticker_sql as sql
+from NixaRobot import LOGGER, dispatcher
+from NixaRobot.modules.connection import connected
+from NixaRobot.modules.disable import DisableAbleCommandHandler
+from NixaRobot.modules.helper_funcs.alternate import send_message
+from NixaRobot.modules.helper_funcs.chat_status import user_admin, user_not_admin
+from NixaRobot.modules.helper_funcs.misc import split_message
+from NixaRobot.modules.helper_funcs.string_handling import extract_time
 
-from AmeliaRobot.modules.log_channel import loggable
-from AmeliaRobot.modules.warns import warn
+from NixaRobot.modules.log_channel import loggable
+from NixaRobot.modules.warns import warn
 from telegram import Chat, Message, ParseMode, Update, User, ChatPermissions
 from telegram.error import BadRequest
 from telegram.ext import CallbackContext, CommandHandler, Filters, MessageHandler
