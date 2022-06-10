@@ -25,21 +25,21 @@ from google_trans_new import google_translator
 from telethon import events
 from telethon.tl.types import ChatBannedRights
 
-from AmeliaRobot import BOT_ID
-from AmeliaRobot.conf import get_int_key, get_str_key
+from NixaRobot import BOT_ID
+from NixaRobot.conf import get_int_key, get_str_key
 
-# from AmeliaRobot.db.mongo_helpers.nsfw_guard import add_chat, get_all_nsfw_chats, is_chat_in_db, rm_chat
-from AmeliaRobot.pyrogramee.telethonbasics import is_admin
-from AmeliaRobot.events import register
-from AmeliaRobot import MONGO_DB_URI 
+# from NixaRobot.db.mongo_helpers.nsfw_guard import add_chat, get_all_nsfw_chats, is_chat_in_db, rm_chat
+from NixaRobot.pyrogramee.telethonbasics import is_admin
+from NixaRobot.events import register
+from NixaRobot import MONGO_DB_URI 
 from pymongo import MongoClient
-from AmeliaRobot.modules.sql_extended.nsfw_watch_sql import (
+from NixaRobot.modules.sql_extended.nsfw_watch_sql import (
     add_nsfwatch,
     get_all_nsfw_enabled_chat,
     is_nsfwatch_indb,
     rmnsfwatch,
 )
-from AmeliaRobot import telethn as tbot
+from NixaRobot import telethn as tbot
 
 translator = google_translator()
 MUTE_RIGHTS = ChatBannedRights(until_date=None, send_messages=False)
@@ -430,7 +430,7 @@ async def del_profanity(event):
 
 __help__ = """
 <b> Group Guardian: </b>
-✪ Amelia can protect your group from NSFW senders, Slag word users and also can force members to use English
+✪ Nixa can protect your group from NSFW senders, Slag word users and also can force members to use English
 
 <b>Commmands</b>
  - /gshield <i>on/off</i> - Enable|Disable Porn cleaning
