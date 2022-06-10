@@ -1,9 +1,9 @@
 from typing import Optional
 
-import AmeliaRobot.modules.sql.rules_sql as sql
-from AmeliaRobot import dispatcher
-from AmeliaRobot.modules.helper_funcs.chat_status import user_admin
-from AmeliaRobot.modules.helper_funcs.string_handling import markdown_parser
+import NixaRobot.modules.sql.rules_sql as sql
+from NixaRobot import dispatcher
+from NixaRobot.modules.helper_funcs.chat_status import user_admin
+from NixaRobot.modules.helper_funcs.string_handling import markdown_parser
 from telegram import (
     InlineKeyboardButton,
     InlineKeyboardMarkup,
