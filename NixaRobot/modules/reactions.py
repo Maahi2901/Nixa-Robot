@@ -1,7 +1,7 @@
 import random
 
-from AmeliaRobot import dispatcher
-from AmeliaRobot.modules.disable import DisableAbleCommandHandler
+from NixaRobot import dispatcher
+from NixaRobot.modules.disable import DisableAbleCommandHandler
 from telegram import Update
 from telegram.ext import CallbackContext, run_async
 
