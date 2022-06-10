@@ -13,7 +13,7 @@ from telegram.ext.dispatcher import run_async
 from telegram.error import BadRequest
 from telegram.utils.helpers import escape_markdown, mention_html
 
-from AmeliaRobot import (
+from NixaRobot import (
     DEV_USERS,
     OWNER_ID,
     DRAGONS,
@@ -24,15 +24,15 @@ from AmeliaRobot import (
     dispatcher,
     sw,
 )
-from AmeliaRobot.__main__ import STATS, TOKEN, USER_INFO
-import AmeliaRobot.modules.sql.userinfo_sql as sql
-from AmeliaRobot.modules.disable import DisableAbleCommandHandler
-from AmeliaRobot.modules.sql.global_bans_sql import is_user_gbanned
-from AmeliaRobot.modules.sql.afk_sql import is_afk, check_afk_status
-from AmeliaRobot.modules.sql.users_sql import get_user_num_chats
-from AmeliaRobot.modules.helper_funcs.chat_status import sudo_plus
-from AmeliaRobot.modules.helper_funcs.extraction import extract_user
-from AmeliaRobot import telethn as YoneTelethonClient, TIGERS, DRAGONS, DEMONS
+from NixaRobot.__main__ import STATS, TOKEN, USER_INFO
+import NixaRobot.modules.sql.userinfo_sql as sql
+from NixaRobot.modules.disable import DisableAbleCommandHandler
+from NixaRobot.modules.sql.global_bans_sql import is_user_gbanned
+from NixaRobot.modules.sql.afk_sql import is_afk, check_afk_status
+from NixaRobot.modules.sql.users_sql import get_user_num_chats
+from NixaRobot.modules.helper_funcs.chat_status import sudo_plus
+from NixaRobot.modules.helper_funcs.extraction import extract_user
+from NixaRobot import telethn as YoneTelethonClient, TIGERS, DRAGONS, DEMONS
 
 
 def no_by_per(totalhp, percentage):
