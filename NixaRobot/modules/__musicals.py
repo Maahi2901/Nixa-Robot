@@ -1,4 +1,4 @@
-__mod_name__ = "◎Music"
+__mod_name__ = "ᴍᴜsɪᴄ"
 
 __help__ = """
 /saavn <i>query</i>: download song from Saavn servers.
