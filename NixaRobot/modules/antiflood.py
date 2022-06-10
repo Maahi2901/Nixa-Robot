@@ -11,8 +11,8 @@ from AmeliaRobot.modules.helper_funcs.chat_status import (
     user_admin,
     user_admin_no_reply,
 )
-from AmeliaRobot.modules.log_channel import loggable
-from AmeliaRobot.modules.sql import antiflood_sql as sql
+from NixaRobot.modules.log_channel import loggable
+from NixaRobot.modules.sql import antiflood_sql as sql
 from telegram.error import BadRequest
 from telegram.ext import (
     CallbackContext,
