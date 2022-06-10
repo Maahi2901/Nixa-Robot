@@ -1,17 +1,3 @@
-#    Copyright (C) DevsExpo 2020-2021
-#    This program is free software: you can redistribute it and/or modify
-#    it under the terms of the GNU Affero General Public License as published by
-#    the Free Software Foundation, either version 3 of the License, or
-#
-#    This program is distributed in the hope that it will be useful,
-#    but WITHOUT ANY WARRANTY; without even the implied warranty of
-#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-#    GNU Affero General Public License for more details.
-#
-#    You should have received a copy of the GNU Affero General Public License
-#    along with this program.  If not, see <https://www.gnu.org/licenses/>.
-
-
 import asyncio
 import os
 import re
@@ -48,7 +34,7 @@ MONGO_DB_URI = get_str_key("MONGO_DB_URI")
 
 client = MongoClient()
 client = MongoClient(MONGO_DB_URI)
-db = client["yonerobot"]
+db = client["NixaRobot"]
 
 async def is_nsfw(event):
     lmao = event
@@ -218,7 +204,7 @@ async def nsfw_watch(client, message):
 
 # This Module is ported from https://github.com/MissJuliaRobot/MissJuliaRobot
 # This hardwork was completely done by MissJuliaRobot
-# Full Credits goes to MissJuliaRobot
+# Full Credits goes to @Nixa_Robot
 
 
 approved_users = db.approve
@@ -437,7 +423,7 @@ __help__ = """
  - /globalmode <i>on/off</i> - Enable|Disable English only mode
  - /profanity <i>on/off</i> - Enable|Disable slag word cleaning
  
-Note: Special credits goes to @Thewarbotz
+Note: Special credits goes to @TechQuard
  
 """
-__mod_name__ = "Shield"
+__mod_name__ = "sʜɪᴇʟᴅ"
