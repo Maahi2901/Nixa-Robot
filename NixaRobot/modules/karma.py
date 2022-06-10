@@ -1,8 +1,8 @@
-from AmeliaRobot import pbot as app
-from AmeliaRobot.utils.errors import capture_err
-from AmeliaRobot.utils.dbfunc import (update_karma, get_karma, get_karmas,
+from NixaRobot import pbot as app
+from NixaRobot.utils.errors import capture_err
+from NixaRobot.utils.dbfunc import (update_karma, get_karma, get_karmas,
                                    int_to_alpha, alpha_to_int)
-from AmeliaRobot.utils.filter_groups import karma_positive_group, karma_negative_group
+from NixaRobot.utils.filter_groups import karma_positive_group, karma_negative_group
 from pyrogram import filters
 
 
