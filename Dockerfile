@@ -1,5 +1,5 @@
 # We're using Debian Slim Buster image
-FROM python:3.8.5-slim-buster
+FROM python:3.10.4-slim-buster
 
 ENV PIP_NO_CACHE_DIR 1
 
@@ -64,12 +64,12 @@ RUN apt update && apt upgrade -y && \
 # Pypi package Repo upgrade
 RUN pip3 install --upgrade pip setuptools
 
-# Copy Python Requirements to /root/AmeliaRobot 
-RUN git clone -b shiken https://github.com/HuntingBots/AsunaRobot /root/AsunaRobot
-WORKDIR /root/AsunaRobot
+# Copy Python Requirements to /root/NixaRobot 
+RUN git clone -b shiken https://github.com/Sumit9969/Nixa-Robot /root/Nixa-Robot
+WORKDIR /root/NixaRobot
 
-#Copy config file to /root/AmeliaRobot/AmeliaRobot
-COPY ./AsunaRobot/sample_config.py ./AmeliaRobot/config.py* /root/AmeliaRobot/AmeliaRobot/
+#Copy config file to /root/NixaRobot/NixaRobot
+COPY ./NixaRobot/sample_config.py ./NixaRobot/config.py* /root/NixaRobot/NixaRobot/
 
 ENV PATH="/home/bot/bin:$PATH"
 
@@ -77,4 +77,4 @@ ENV PATH="/home/bot/bin:$PATH"
 RUN pip3 install -U -r requirements.txt
 
 # Starting Worker
-CMD ["python3","-m","AmeliaRobot"]
+CMD ["python3","-m","NixaRobot"]
