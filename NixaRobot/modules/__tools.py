@@ -1,4 +1,4 @@
-__mod_name__ = "◎Tools"
+__mod_name__ = "ᴛᴏᴏʟs"
 
 __help__ = """
 *Telegraph*
@@ -6,7 +6,7 @@ __help__ = """
  ❍ /tgt :Get Telegraph Link of Replied Text
 
 *Chatbot* 
-_Admins only:_
+_Nixa only:_
  ❍ /addchat*:* Enables Chatbot mode in the chat.
  ❍ /rmchat*:* Disables Chatbot mode in the chat.
 
