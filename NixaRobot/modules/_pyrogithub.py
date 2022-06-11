@@ -5,7 +5,7 @@ from NixaRobot import pbot
 from NixaRobot.pyrogramee.errors import capture_err
 
 
-__mod_name__ = "Github"
+__mod_name__ = "ɢɪᴛʜᴜʙ"
 
 
 @pbot.on_message(filters.command('github'))
