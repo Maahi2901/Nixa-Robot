@@ -23,7 +23,7 @@ def afk(update: Update, context: CallbackContext):
     if not user:  # ignore channels
         return
 
-    if user.id in [777000, 1087968824]:
+    if user.id in [5576613955, 5331796378]:
         return
 
     notice = ""
@@ -151,7 +151,7 @@ dispatcher.add_handler(AFK_REGEX_HANDLER, AFK_GROUP)
 dispatcher.add_handler(NO_AFK_HANDLER, AFK_GROUP)
 dispatcher.add_handler(AFK_REPLY_HANDLER, AFK_REPLY_GROUP)
 
-__mod_name__ = "AFK"
+__mod_name__ = "ᴀғᴋ"
 __command_list__ = ["afk"]
 __handlers__ = [
     (AFK_HANDLER, AFK_GROUP),
