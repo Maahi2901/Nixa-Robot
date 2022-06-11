@@ -1,4 +1,4 @@
-# ©itsmelegend
+
 import aiohttp
 from pyrogram import filters
 from NixaRobot import pbot
