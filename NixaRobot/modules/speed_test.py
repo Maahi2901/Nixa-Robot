@@ -15,8 +15,8 @@ def convert(speed):
 def speedtestxyz(update: Update, context: CallbackContext):
     buttons = [
         [
-            InlineKeyboardButton("Image", callback_data="speedtest_image"),
-            InlineKeyboardButton("Text", callback_data="speedtest_text"),
+            InlineKeyboardButton("ɪᴍᴀɢᴇ", callback_data="speedtest_image"),
+            InlineKeyboardButton("ᴛᴇxᴛ", callback_data="speedtest_text"),
         ]
     ]
     update.effective_message.reply_text(
@@ -59,6 +59,6 @@ SPEED_TEST_CALLBACKHANDLER = CallbackQueryHandler(
 dispatcher.add_handler(SPEED_TEST_HANDLER)
 dispatcher.add_handler(SPEED_TEST_CALLBACKHANDLER)
 
-__mod_name__ = "SpeedTest"
+__mod_name__ = "sᴘᴇᴇᴅᴛᴇsᴛ"
 __command_list__ = ["speedtest"]
 __handlers__ = [SPEED_TEST_HANDLER, SPEED_TEST_CALLBACKHANDLER]
